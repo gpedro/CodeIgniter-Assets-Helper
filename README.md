@@ -63,20 +63,20 @@ assets_img($multiple_img);
 ```php
 $multiple_js = array('example.js', array('style.js', array('charset' => 'utf-8')));
 # Returns:
-# <link rel="stylesheet" type="text/css" href="http://www.devol.ve/devolve/dev/assets/css/example.css">
-# <link rel="stylesheet" type="text/css" href="http://www.devol.ve/devolve/dev/assets/css/style.css" media="screen">
+# <link rel="stylesheet" type="text/css" href="http://www.website.com/assets/css/example.css">
+# <link rel="stylesheet" type="text/css" href="http://www.website.com/assets/css/style.css" media="screen">
 
 $multiple_js = array('example.js', array('style.js', array('charset' => 'utf-8')));
 assets_js($multiple_js)
 # Returns:
-#<script type="text/javascript" src="http://www.devol.ve/devolve/dev/assets/js/example.js"></script>
-#<script type="text/javascript" src="http://www.devol.ve/devolve/dev/assets/js/style.js" charset="utf-8"></script>
+#<script type="text/javascript" src="http://www.website.com/assets/js/example.js"></script>
+#<script type="text/javascript" src="http://www.website.com/assets/js/style.js" charset="utf-8"></script>
 
 $multiple_img = array('example.png', array('style.css', array('title' => 'Awesome Helper')));
 assets_img($multiple_img)
 # Returns:
-#<img src="http://www.devol.ve/devolve/dev/assets/img/example.png"/>
-#<img src="http://www.devol.ve/devolve/dev/assets/img/style.css" title="Awesome Helper"/>
+#<img src="http://www.website.com/assets/img/example.png"/>
+#<img src="http://www.website.com/assets/img/style.css" title="Awesome Helper"/>
 
 ```
 
