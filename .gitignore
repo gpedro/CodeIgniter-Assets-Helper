@@ -1,0 +1,31 @@
+# Created by http://www.gitignore.io
+
+### CodeIgniter ###
+*/config/development
+*/logs/log-*.php
+*/logs/!index.html
+*/cache/*
+*/cache/!index.html
+*/cache/!.htaccess
+
+### TextMate ###
+*.tmproj
+*.tmproject
+tmtags
+
+
+### OSX ###
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Icon must ends with two \r.
+Icon
+
+
+# Thumbnails
+._*
+
+# Files that might appear on external disk
+.Spotlight-V100
+.Trashes
