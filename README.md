@@ -61,19 +61,20 @@ assets_img($multiple_img);
 
 #### Multiple files with custom attributes
 ```php
-$multiple_js = array('example.js', array('style.js', array('charset' => 'utf-8')));
+$multiple_css = array('example.css', array('style.css', array('media' => 'screen')));
+assets_css($multiple_css);
 # Returns:
 # <link rel="stylesheet" type="text/css" href="http://www.website.com/assets/css/example.css">
 # <link rel="stylesheet" type="text/css" href="http://www.website.com/assets/css/style.css" media="screen">
 
 $multiple_js = array('example.js', array('style.js', array('charset' => 'utf-8')));
-assets_js($multiple_js)
+assets_js($multiple_js);
 # Returns:
 #<script type="text/javascript" src="http://www.website.com/assets/js/example.js"></script>
 #<script type="text/javascript" src="http://www.website.com/assets/js/style.js" charset="utf-8"></script>
 
 $multiple_img = array('example.png', array('style.css', array('title' => 'Awesome Helper')));
-assets_img($multiple_img)
+assets_img($multiple_img);
 # Returns:
 #<img src="http://www.website.com/assets/img/example.png"/>
 #<img src="http://www.website.com/assets/img/style.css" title="Awesome Helper"/>
