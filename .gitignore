@@ -13,7 +13,6 @@
 *.tmproject
 tmtags
 
-
 ### OSX ###
 .DS_Store
 .AppleDouble
@@ -22,6 +21,8 @@ tmtags
 # Icon must ends with two \r.
 Icon
 
+### Linux ###
+*~
 
 # Thumbnails
 ._*
