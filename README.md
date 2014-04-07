@@ -13,7 +13,7 @@ Copy `assets_helper.php` into the `applications/helpers` directory and copy `ass
 
 Configuration
 -------------
-YYou need to set your assets folder for each type (images, stylesheets or javascript). See `applications/config/assets.php` for more information.
+You need to set your assets folder for each type (images, stylesheets or javascript). See `applications/config/assets.php` for more information.
 
 Usage
 =====
