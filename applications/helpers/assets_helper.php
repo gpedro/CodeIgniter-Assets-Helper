@@ -76,13 +76,12 @@ if (!function_exists('_assets_base'))
     }
     else
     {
-      $attr = '';
       if(!empty($attr) && is_array($attr))
       {
-        $attr = ' ';
+        $attribute = ' ';
         foreach($attr as $key => $value)
         {
-          $attr .= ' '.$key.'="'.$value.'"';
+          $attribute .= ' '.$key.'="'.$value.'"';
         }
       }
     
@@ -90,11 +89,11 @@ if (!function_exists('_assets_base'))
       $path = base_url($config['path_base'].DS.$config['path_'.$type].DS.$file);
     
       if($type == 'js')
-        return '<script type="text/javascript" src="' . $path . '"' . $attr . '></script>';
+        return '<script type="text/javascript" src="' . $path . '"' . $attribute . '></script>';
       else if($type == 'css')
-        return '<link rel="stylesheet" type="text/css" href="' . $path . '"' . $attr . '>';
+        return '<link rel="stylesheet" type="text/css" href="' . $path . '"' . $attribute . '>';
       else if($type == 'img')
-        return '<img src="' . $path . '"'.$attr.'/>';
+        return '<img src="' . $path . '"'.$attribute.'/>';
     }
   }
 }
