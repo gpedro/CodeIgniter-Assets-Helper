@@ -76,9 +76,9 @@ if (!function_exists('_assets_base'))
     }
     else
     {
+      $attribute = ' ';
       if(!empty($attr) && is_array($attr))
       {
-        $attribute = ' ';
         foreach($attr as $key => $value)
         {
           $attribute .= ' '.$key.'="'.$value.'"';
