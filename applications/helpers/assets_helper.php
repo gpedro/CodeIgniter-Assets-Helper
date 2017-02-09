@@ -51,8 +51,19 @@ if (!function_exists('_process_array'))
         }
       
         $config = _getConfig();
-        $path = base_url($config['path_base'].DS.$config['path_'.$type].DS.$file);
-      
+        // check for sub_path set OR empty from $file
+           $file                    =  trim($file);
+           $path_parts              =  pathinfo($file );
+       // select file name from  $path_parts  
+           $file_name           =  $path_parts['basename'];
+       // select sub path from   $path_parts 
+           $sub_path             =  $path_parts['dirname'];
+      //set path if $sub_path is empty(default path)
+     $path = base_url($config['path_base'].DS.$config['path_'.$type].DS.$file_name );   
+    // set path whit sub_paht
+     if( ! empty ($sub_path)){  
+         $path = base_url($config['path_base'].DS.$sub_path.DS.$config['path_'.$type].DS.$file_name );
+     }
         if($type == 'js')
           $head .= '<script type="text/javascript" src="' . $path . '"' . $attr . '></script>';
         else if($type == 'css')
@@ -86,8 +97,19 @@ if (!function_exists('_assets_base'))
       }
     
       $config = _getConfig();
-      $path = base_url($config['path_base'].DS.$config['path_'.$type].DS.$file);
-    
+        // check for sub_path set OR empty from $file
+           $file                    =  trim($file);
+           $path_parts              =  pathinfo($file );
+       // select file name from  $path_parts  
+           $file_name               =  $path_parts['basename'];
+      // select sub path from   $path_parts 
+           $sub_path                =  $path_parts['dirname'];
+      //set path if $sub_path is empty(default path)
+     $path = base_url($config['path_base'].DS.$config['path_'.$type].DS.$file_name );   
+    // set path whit sub_paht
+     if( ! empty ($sub_path)){  
+         $path = base_url($config['path_base'].DS.$sub_path.DS.$config['path_'.$type].DS.$file_name );
+     }
       if($type == 'js')
         return '<script type="text/javascript" src="' . $path . '"' . $attribute . '></script>';
       else if($type == 'css')
