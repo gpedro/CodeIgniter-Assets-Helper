@@ -79,11 +79,11 @@ assets_js($multiple_js);
 ```
 
 ```php
-$multiple_img = array(array('example.png', array('alt' => 'ranisalt rules')), array('style.css', array('title' => 'Awesome Helper')));
+$multiple_img = array(array('pic_1.png', array('alt' => 'ranisalt rules')), array('pic_2.jpg', array('title' => 'Awesome Helper')));
 assets_img($multiple_img);
 # Results in
-<img src="http://www.website.com/assets/img/example.png" alt="ranisalt rules"/>
-<img src="http://www.website.com/assets/img/style.css" title="Awesome Helper"/>
+<img src="http://www.website.com/assets/img/pic_1.png" alt="ranisalt rules"/>
+<img src="http://www.website.com/assets/img/pic_2.jpg" title="Awesome Helper"/>
 ```
 
 You probably got the hang of it.
