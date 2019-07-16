@@ -35,10 +35,10 @@ if (!function_exists('_process_array'))
           {
             if(is_array($child_1_value))
             {
-              $attr .= ' ';
+              $attr = ' ';
               foreach($child_1_value as $child_2_key => $child_2_value)
               {
-                $attr .= $child_2_key.'="'.$child_2_value.'"';
+                $attr .= $child_2_key.'="'.$child_2_value.'" ';
               }
             }
             else
